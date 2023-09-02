@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev server</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li><a class="header__link" href="#about">Sobre mi</a></li>
+          <li><a class="header__link" href="#projects">Proyectos</a></li>
+          <li><a class="header__link" href="#contact">Contacto</a></li>
+          <li class="header__line"></li>
+          <li>
+            <button id="theme-toggle" class="header__sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="header__resume btn" href="#"><i class="fas fa-home"></i></a>
+          </li>
+        </ul>
+        <button class="header__bars">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <!-- mobile navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li><a class="mobile-nav__link" href="#about">Sobre Mi</a></li>
+          <li><a class="mobile-nav__link" href="#projects">Proyectos</a></li>
+          <li><a class="mobile-nav__link" href="#contact">Contacto</a></li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button id="theme-toggle" class="mobile-nav__sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="mobile-nav__btn btn" href="#">Inicio</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end of mobile navigation -->
+    <main class="container" id="home">
+      <section class="hero">
+        <img
+          class="hero__img"
+          src="./public/avatar.png"
+          alt="Profile picture"
+        />
+        <h2 class="hero__subtitle">Hola, Soy Elías</h2>
+        <h1 class="hero__title">Desarrollador de videojuegos</h1>
+        <p class="hero__description">
+          Actualmente me encuentro cursando la carrera <br />
+          <strong
+            >Licenciatura en Produccion de Videojuegos y Entretenimiento
+            Digital.</strong
+          >
+        </p>
+        <a class="hero__btn btn" download href="../public/Elias Coria CV.pdf"
+          >Descargar CV</a
+        >
+      </section>
+      <!-- section -->
+      <section class="about container section" id="about">
+        <div class="about__content">
+          <h2 class="about__title">Sobre Mi</h2>
+          <p class="about__description">
+            Soy Elias Benjamin Coria, estudiante universitario. Me apasiona la
+            programación y la produccion de videojuegos.
+          </p>
+          <p class="about__description">
+            En 2021 me gradue de la escuela E.E.T.P N°460 "G.Lehmann",
+            obteniendo el titulo de
+            <strong>"Técnico en Informática Profesional y Personal".</strong>
+          </p>
+          <p class="about__description">
+            Comence a cursar la Licenciatura en Produccion de Videojuegos en
+            2022, me encuentro cursando el segundo año.
+          </p>
+          <hr class="about__hr" />
+          <h3 class="about__subtitle">Skills</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">HTML</li>
+              <li class="about__list">CSS</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">Java Script</li>
+              <li class="about__list">Phaser.js</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about__img-wrapper">
+          <img
+            class="about__img lazy loading"
+            src="https://fakeimg.pl/840x440"
+            data-src="./public/videojuegos-agilidad.jpg"
+            alt="Videojuegos"
+          />
+        </div>
+      </section>
+
+      <!-- section -->
+      <section class="work container section" id="projects">
+        <h2 class="work__title">Proyectos</h2>
+        <p class="work__description">
+          Estos son algunos de mis proyectos hechos durante la carrera.
+        </p>
+        <div class="work__container">
+          <!-- project 1 -->
+          <h3 class="work__project-title">Defender</h3>
+          <div class="work__img-wrapper work__image1">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/635x545"
+              data-src="./public/Defenderproject.PNG"
+              alt="Defender Game"
+            />
+          </div>
+          <div class="work__project work__content1">
+            <h3 class="work__project-subtitle">Defender</h3>
+            <p class="work__project-description1">
+              ¡La Tierra está siendo Invadida por Extraterrestres! ¡Acabalos!.
+            </p>
+            <p class="work__project-description2">
+              Defender es un Videojuego que desarrolle como entrega final de
+              cuatrimestre. El arte está hecho en pixel art y la programación
+              con el motor de videojuegos Phaser 3.
+            </p>
+            <a
+              class="btn work__project-btn"
+              href="https://eliascoria.github.io/Defender/"
+              target="_blank"
+              >Jugar</a
+            >
+          </div>
+          <!-- project 2 -->
+
+          <h3 class="work__project-title">Trabajo Practico 1</h3>
+          <div class="work__img-wrapper work__image2">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/635x545"
+              data-src="./public/tp1project.png"
+              alt="Phaser Game"
+            />
+          </div>
+          <div class="work__project work__content2">
+            <h3 class="work__project-subtitle">Trabajo Practico 1</h3>
+            <p class="work__project-description1">Ninja Moncho</p>
+            <p class="work__project-description2">
+              Ninja Moncho es un videojuego realizado en la carrera para ser
+              entregado como Trabajo Práctico, está desarrollado con el Motor
+              Phaser 3.
+            </p>
+            <a
+              class="btn work__project-btn"
+              href="https://eliascoria.github.io/JuegoNinjaMoncho/"
+              target="_blank"
+              >Jugar</a
+            >
+          </div>
+          <!-- project 3 -->
+
+          <h3 class="work__project-title">Trabajo Práctico 1</h3>
+          <div class="work__img-wrapper work__image3">
+            <img
+              class="lazy loading"
+              src="https://fakeimg.pl/635x545"
+              data-src="./public/tp2project.png"
+              alt="Phaser Game"
+            />
+          </div>
+          <div class="work__project work__content3">
+            <h3 class="work__project-subtitle">Trabajo Práctico 1</h3>
+            <p class="work__project-description1">Indio Moncho</p>
+            <p class="work__project-description2">
+              Indio Moncho es un videojuego realizado utilizando el Motor Phaser
+              3 y el programa Tiled para realizar su Tilemap. Fue realizado para
+              ser entregado como Trabajo Práctico en la carrera.
+            </p>
+            <a
+              class="btn work__project-btn"
+              href="https://eliascoria.github.io/JuegoIndioMoncho/"
+              target="_blank"
+              >Jugar</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- section -->
+      <section class="contact container section" id="contact">
+        <h2 class="contact__title">Contáctame</h2>
+        <p class="contact__description">
+          <a class="contact__link" href="https://github.com/eliascoria"><i class="fab fa-github"></i>eliascoria<br /></a>
+          <i class="fas fa-mobile"></i>3492-208771<br />
+          <i class="fas fa-envelope-open"></i>eliascoria015@gmail.com
+        </p>
+        <a
+          class="contact__btn btn"
+          href="mailto:eliascoria015@gmail.com"
+          target="_blank"
+          >Contactar</a
+        >
+      </section>
+    </main>
+    <footer class="foote container section">
+      <h3 class="footer__title">- Elias Coria -</h3>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
